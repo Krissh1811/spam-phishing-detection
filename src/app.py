@@ -7,10 +7,10 @@ from fuzzy import get_risk_level
 
 app = Flask(__name__)
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-model_path = os.path.join(BASE_DIR, "artifacts" ,"model.h5")
-vectorizer_path = os.path.join(BASE_DIR, "artifacts" ,"vectorizer.pkl")
+model_path = os.path.join(BASE_DIR, "artifacts", "model.h5")
+vectorizer_path = os.path.join(BASE_DIR, "artifacts", "vectorizer.pkl")
 
 model = load_model(model_path)
 vectorizer = pickle.load(open(vectorizer_path, "rb"))
