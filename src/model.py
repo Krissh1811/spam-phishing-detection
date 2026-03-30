@@ -1,7 +1,8 @@
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
-from preprocess import X_train, X_test, y_train, y_test
+from preprocess import X_train, X_test, y_train, y_test, vectorizer
+import pickle
 
 model = Sequential()
 
@@ -28,3 +29,5 @@ loss, accuracy = model.evaluate(X_test.toarray(), y_test)
 
 print("Accuracy: ", accuracy)
 
+model.save("model.h5")
+pickle.dump(vectorizer, open("vectorizer.pkl", "wb"))

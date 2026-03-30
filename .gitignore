@@ -4,8 +4,5 @@ __pycache__/
 *.pyc
 *.pyo
 
-model.h5
-vectorizer.pk1
-
 node_modules/
 .env
