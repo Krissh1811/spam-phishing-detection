@@ -27,9 +27,9 @@ def get_risk_level(conf_value):
 
     risk_value = risk_sim.output['risk']
 
-    if risk_value < 40:
+    if risk_value < 30:
         return "LOW"
-    elif risk_value < 70:
+    elif risk_value < 75:
         return "MEDIUM"
     else:
         return "HIGH"
