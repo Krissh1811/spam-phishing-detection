@@ -3,7 +3,7 @@ import re
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 
-df = pd.read_csv("data/emails.csv", encoding='latin-1')
+df = pd.read_csv("../data/emails.csv", encoding='latin-1')
 
 df = df[['v1', 'v2']]
 df.columns = ['label', 'text']
